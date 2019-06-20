@@ -152,8 +152,7 @@ namespace Salao
                 habilitaCampos(true);
                 txtNome.Focus();
             }
-            else MessageBox.Show("Não Há registros para editar...", "Editar",
-               MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            else MessageBox.Show("Erro - Nenhum registro selecionado", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void BtnRemover_Click(object sender, EventArgs e)
@@ -164,15 +163,14 @@ namespace Salao
             {
                 int id = Convert.ToInt32(lblId.Text);
                 DialogResult resposta;
-                resposta = MessageBox.Show("Deseja Remover? ", "Remover", MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+                resposta = MessageBox.Show("Deseja Remover? ", "Remover", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
 
                 if (resposta == DialogResult.Yes)
                     bllCli.Delete(id);
 
 
             }
-            else MessageBox.Show("Não há registro para remover...");
+            else MessageBox.Show("Erro - Nenhum registro selecionado", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             limpaCampos();
             habilitaCampos(false);

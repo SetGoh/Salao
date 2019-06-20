@@ -17,9 +17,6 @@ namespace Salao
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmMenu());
-
-            //Teste
-            //teste
         }
     }
 }

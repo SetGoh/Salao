@@ -169,7 +169,7 @@ namespace Salao.Camadas.DAL
             }
             catch
             {
-                Console.WriteLine("Consulta Select de Produtos deu problema");
+                Console.WriteLine("Erro - Consulta Select de Cliente");
             }
             finally
             {

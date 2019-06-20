@@ -8,3 +8,14 @@ C:\Users\georg\source\repos\Salao\Salao\obj\Debug\Salao.csproj.GenerateResource.
 C:\Users\georg\source\repos\Salao\Salao\obj\Debug\Salao.csproj.CoreCompileInputs.cache
 C:\Users\georg\source\repos\Salao\Salao\obj\Debug\Salao.exe
 C:\Users\georg\source\repos\Salao\Salao\obj\Debug\Salao.pdb
+C:\Users\georg\Source\Repos\SetGoh\Salao\Salao\bin\Debug\Salao.exe.config
+C:\Users\georg\Source\Repos\SetGoh\Salao\Salao\bin\Debug\Salao.exe
+C:\Users\georg\Source\Repos\SetGoh\Salao\Salao\bin\Debug\Salao.pdb
+C:\Users\georg\Source\Repos\SetGoh\Salao\Salao\obj\Debug\Salao.csprojAssemblyReference.cache
+C:\Users\georg\Source\Repos\SetGoh\Salao\Salao\obj\Debug\Salao.frmCliente.resources
+C:\Users\georg\Source\Repos\SetGoh\Salao\Salao\obj\Debug\Salao.Properties.Resources.resources
+C:\Users\georg\Source\Repos\SetGoh\Salao\Salao\obj\Debug\Salao.csproj.GenerateResource.cache
+C:\Users\georg\Source\Repos\SetGoh\Salao\Salao\obj\Debug\Salao.csproj.CoreCompileInputs.cache
+C:\Users\georg\Source\Repos\SetGoh\Salao\Salao\obj\Debug\Salao.exe
+C:\Users\georg\Source\Repos\SetGoh\Salao\Salao\obj\Debug\Salao.pdb
+C:\Users\georg\Source\Repos\SetGoh\Salao\Salao\obj\Debug\Salao.frmMenu.resources

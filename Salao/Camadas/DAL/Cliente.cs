@@ -138,5 +138,123 @@ namespace Salao.Camadas.DAL
             }
 
         }
+
+        public List<Model.Cliente> SelectById(int id)
+        {
+            List<Model.Cliente> lstCliente = new List<Model.Cliente>();
+            SqlConnection conexao = new SqlConnection(strCon);
+            string sql = "Select * from Cliente where id=@id;";
+            SqlCommand cmd = new SqlCommand(sql, conexao);
+            cmd.Parameters.AddWithValue("@id", id);
+            try
+            {
+                conexao.Open();
+                SqlDataReader dados = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                while (dados.Read())
+                {
+                    Model.Cliente cliente = new Model.Cliente();
+                    cliente.id = Convert.ToInt32(dados["id"].ToString());
+                    cliente.nome = dados["nome"].ToString();
+                    cliente.aniversario = Convert.ToDateTime(dados["aniversario"].ToString());
+                    cliente.telefone = dados["telefone"].ToString();
+                    cliente.celular = dados["celular"].ToString();
+                    cliente.endereco = dados["endereco"].ToString();
+                    cliente.numero = dados["numero"].ToString();
+                    cliente.bairro = dados["bairro"].ToString();
+                    cliente.cidade = dados["cidade"].ToString();
+                    cliente.uf = dados["uf"].ToString();
+                    cliente.cep = dados["cep"].ToString();
+                    lstCliente.Add(cliente);
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Consulta Select de Produtos deu problema");
+            }
+            finally
+            {
+                conexao.Close(); //não é necessario pois usou o CommandBehavior.CloseConnection
+            }
+            return lstCliente;
+        }
+
+        public List<Model.Cliente> SelectByNome(string nome)
+        {
+            List<Model.Cliente> lstCliente = new List<Model.Cliente>();
+            SqlConnection conexao = new SqlConnection(strCon);
+            string sql = "Select * from Cliente where (nome like @nome);";
+            SqlCommand cmd = new SqlCommand(sql, conexao);
+            cmd.Parameters.AddWithValue("@nome", "%" + nome + "%");
+            try
+            {
+                conexao.Open();
+                SqlDataReader dados = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                while (dados.Read())
+                {
+                    Model.Cliente cliente = new Model.Cliente();
+                    cliente.id = Convert.ToInt32(dados["id"].ToString());
+                    cliente.nome = dados["nome"].ToString();
+                    cliente.aniversario = Convert.ToDateTime(dados["aniversario"].ToString());
+                    cliente.telefone = dados["telefone"].ToString();
+                    cliente.celular = dados["celular"].ToString();
+                    cliente.endereco = dados["endereco"].ToString();
+                    cliente.numero = dados["numero"].ToString();
+                    cliente.bairro = dados["bairro"].ToString();
+                    cliente.cidade = dados["cidade"].ToString();
+                    cliente.uf = dados["uf"].ToString();
+                    cliente.cep = dados["cep"].ToString();
+                    lstCliente.Add(cliente);
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Erro - Consulta Select de Cliente");
+            }
+            finally
+            {
+                conexao.Close(); //não é necessario pois usou o CommandBehavior.CloseConnection
+            }
+            return lstCliente;
+        }
+
+        public List<Model.Cliente> SelectByCidade(string cidade)
+        {
+            List<Model.Cliente> lstCliente = new List<Model.Cliente>();
+            SqlConnection conexao = new SqlConnection(strCon);
+            string sql = "Select * from Cliente where (cidade like @cidade);";
+            SqlCommand cmd = new SqlCommand(sql, conexao);
+            cmd.Parameters.AddWithValue("@cidade", "%" + cidade + "%");
+            try
+            {
+                conexao.Open();
+                SqlDataReader dados = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                while (dados.Read())
+                {
+                    Model.Cliente cliente = new Model.Cliente();
+                    cliente.id = Convert.ToInt32(dados["id"].ToString());
+                    cliente.nome = dados["nome"].ToString();
+                    cliente.aniversario = Convert.ToDateTime(dados["aniversario"].ToString());
+                    cliente.telefone = dados["telefone"].ToString();
+                    cliente.celular = dados["celular"].ToString();
+                    cliente.endereco = dados["endereco"].ToString();
+                    cliente.numero = dados["numero"].ToString();
+                    cliente.bairro = dados["bairro"].ToString();
+                    cliente.cidade = dados["cidade"].ToString();
+                    cliente.uf = dados["uf"].ToString();
+                    cliente.cep = dados["cep"].ToString();
+                    lstCliente.Add(cliente);
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Erro - Consulta Select de Cliente");
+            }
+            finally
+            {
+                conexao.Close(); //não é necessario pois usou o CommandBehavior.CloseConnection
+            }
+            return lstCliente;
+        }
+
     }
 }

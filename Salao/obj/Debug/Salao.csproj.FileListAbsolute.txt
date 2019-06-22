@@ -19,3 +19,6 @@ C:\Users\georg\Source\Repos\SetGoh\Salao\Salao\obj\Debug\Salao.csproj.CoreCompil
 C:\Users\georg\Source\Repos\SetGoh\Salao\Salao\obj\Debug\Salao.exe
 C:\Users\georg\Source\Repos\SetGoh\Salao\Salao\obj\Debug\Salao.pdb
 C:\Users\georg\Source\Repos\SetGoh\Salao\Salao\obj\Debug\Salao.frmMenu.resources
+C:\Users\georg\Source\Repos\SetGoh\Salao\Salao\obj\Debug\Salao.frmProduto.resources
+C:\Users\georg\Source\Repos\SetGoh\Salao\Salao\obj\Debug\Salao.frmVenda.resources
+C:\Users\georg\Source\Repos\SetGoh\Salao\Salao\obj\Debug\Salao.frmServico.resources

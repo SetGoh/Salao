@@ -59,14 +59,14 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnPesquisar = new System.Windows.Forms.Button();
-            this.txtPesquisa = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnFiltro = new System.Windows.Forms.Button();
-            this.rdbTodos = new System.Windows.Forms.RadioButton();
-            this.rdbNome = new System.Windows.Forms.RadioButton();
-            this.rdbCidade = new System.Windows.Forms.RadioButton();
             this.rdbId = new System.Windows.Forms.RadioButton();
+            this.rdbCidade = new System.Windows.Forms.RadioButton();
+            this.rdbNome = new System.Windows.Forms.RadioButton();
+            this.rdbTodos = new System.Windows.Forms.RadioButton();
+            this.btnFiltro = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtPesquisa = new System.Windows.Forms.TextBox();
+            this.btnPesquisar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -82,7 +82,7 @@
             this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCliente.Location = new System.Drawing.Point(6, 83);
             this.dgvCliente.Name = "dgvCliente";
-            this.dgvCliente.Size = new System.Drawing.Size(983, 128);
+            this.dgvCliente.Size = new System.Drawing.Size(986, 129);
             this.dgvCliente.TabIndex = 0;
             this.dgvCliente.DoubleClick += new System.EventHandler(this.DgvCliente_DoubleClick);
             // 
@@ -94,7 +94,7 @@
             this.btnRemover.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnRemover.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemover.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRemover.Location = new System.Drawing.Point(389, 498);
+            this.btnRemover.Location = new System.Drawing.Point(391, 499);
             this.btnRemover.Name = "btnRemover";
             this.btnRemover.Size = new System.Drawing.Size(98, 32);
             this.btnRemover.TabIndex = 1;
@@ -110,7 +110,7 @@
             this.btnEditar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEditar.BackgroundImage")));
             this.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnEditar.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(247, 498);
+            this.btnEditar.Location = new System.Drawing.Point(249, 499);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(98, 32);
             this.btnEditar.TabIndex = 2;
@@ -126,7 +126,7 @@
             this.btnInserir.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInserir.Image = ((System.Drawing.Image)(resources.GetObject("btnInserir.Image")));
             this.btnInserir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInserir.Location = new System.Drawing.Point(105, 498);
+            this.btnInserir.Location = new System.Drawing.Point(107, 499);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Size = new System.Drawing.Size(98, 32);
             this.btnInserir.TabIndex = 3;
@@ -362,7 +362,7 @@
             this.btnGravar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnGravar.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGravar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGravar.Location = new System.Drawing.Point(531, 498);
+            this.btnGravar.Location = new System.Drawing.Point(533, 499);
             this.btnGravar.Name = "btnGravar";
             this.btnGravar.Size = new System.Drawing.Size(98, 32);
             this.btnGravar.TabIndex = 26;
@@ -377,7 +377,7 @@
             this.btnCancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancelar.BackgroundImage")));
             this.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnCancelar.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(673, 498);
+            this.btnCancelar.Location = new System.Drawing.Point(675, 499);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(98, 32);
             this.btnCancelar.TabIndex = 27;
@@ -392,7 +392,7 @@
             this.btnSair.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSair.BackgroundImage")));
             this.btnSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnSair.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(815, 498);
+            this.btnSair.Location = new System.Drawing.Point(817, 499);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(98, 32);
             this.btnSair.TabIndex = 28;
@@ -420,69 +420,55 @@
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.groupBox2.Location = new System.Drawing.Point(12, 31);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(995, 217);
+            this.groupBox2.Size = new System.Drawing.Size(998, 218);
             this.groupBox2.TabIndex = 30;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Lista do clientes";
+            this.groupBox2.Text = "Lista dos clientes";
             // 
-            // btnPesquisar
+            // rdbId
             // 
-            this.btnPesquisar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnPesquisar.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnPesquisar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.BackgroundImage")));
-            this.btnPesquisar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnPesquisar.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPesquisar.Location = new System.Drawing.Point(380, 31);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(97, 32);
-            this.btnPesquisar.TabIndex = 32;
-            this.btnPesquisar.Text = "&Pesquisar";
-            this.btnPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPesquisar.UseVisualStyleBackColor = false;
-            this.btnPesquisar.Click += new System.EventHandler(this.BtnPesquisar_Click);
+            this.rdbId.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.rdbId.AutoSize = true;
+            this.rdbId.Location = new System.Drawing.Point(670, 35);
+            this.rdbId.Name = "rdbId";
+            this.rdbId.Size = new System.Drawing.Size(38, 24);
+            this.rdbId.TabIndex = 37;
+            this.rdbId.TabStop = true;
+            this.rdbId.Text = "Id";
+            this.rdbId.UseVisualStyleBackColor = true;
+            this.rdbId.Visible = false;
             // 
-            // txtPesquisa
+            // rdbCidade
             // 
-            this.txtPesquisa.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtPesquisa.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesquisa.Location = new System.Drawing.Point(81, 34);
-            this.txtPesquisa.Name = "txtPesquisa";
-            this.txtPesquisa.Size = new System.Drawing.Size(293, 26);
-            this.txtPesquisa.TabIndex = 31;
+            this.rdbCidade.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.rdbCidade.AutoSize = true;
+            this.rdbCidade.Location = new System.Drawing.Point(783, 35);
+            this.rdbCidade.Name = "rdbCidade";
+            this.rdbCidade.Size = new System.Drawing.Size(70, 24);
+            this.rdbCidade.TabIndex = 36;
+            this.rdbCidade.TabStop = true;
+            this.rdbCidade.Text = "Cidade";
+            this.rdbCidade.UseVisualStyleBackColor = true;
+            this.rdbCidade.Visible = false;
             // 
-            // label2
+            // rdbNome
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 37);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 20);
-            this.label2.TabIndex = 31;
-            this.label2.Text = "Pesquisa:";
-            // 
-            // btnFiltro
-            // 
-            this.btnFiltro.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnFiltro.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnFiltro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFiltro.BackgroundImage")));
-            this.btnFiltro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnFiltro.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFiltro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFiltro.Location = new System.Drawing.Point(483, 31);
-            this.btnFiltro.Name = "btnFiltro";
-            this.btnFiltro.Size = new System.Drawing.Size(97, 32);
-            this.btnFiltro.TabIndex = 33;
-            this.btnFiltro.Text = "&Filtro";
-            this.btnFiltro.UseVisualStyleBackColor = false;
-            this.btnFiltro.Click += new System.EventHandler(this.BtnFiltro_Click);
+            this.rdbNome.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.rdbNome.AutoSize = true;
+            this.rdbNome.Location = new System.Drawing.Point(714, 35);
+            this.rdbNome.Name = "rdbNome";
+            this.rdbNome.Size = new System.Drawing.Size(63, 24);
+            this.rdbNome.TabIndex = 35;
+            this.rdbNome.TabStop = true;
+            this.rdbNome.Text = "Nome";
+            this.rdbNome.UseVisualStyleBackColor = true;
+            this.rdbNome.Visible = false;
             // 
             // rdbTodos
             // 
             this.rdbTodos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rdbTodos.AutoSize = true;
-            this.rdbTodos.Location = new System.Drawing.Point(597, 35);
+            this.rdbTodos.Location = new System.Drawing.Point(599, 35);
             this.rdbTodos.Name = "rdbTodos";
             this.rdbTodos.Size = new System.Drawing.Size(65, 24);
             this.rdbTodos.TabIndex = 34;
@@ -492,44 +478,58 @@
             this.rdbTodos.Visible = false;
             this.rdbTodos.CheckedChanged += new System.EventHandler(this.rdbTodos_CheckedChanged);
             // 
-            // rdbNome
+            // btnFiltro
             // 
-            this.rdbNome.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.rdbNome.AutoSize = true;
-            this.rdbNome.Location = new System.Drawing.Point(712, 35);
-            this.rdbNome.Name = "rdbNome";
-            this.rdbNome.Size = new System.Drawing.Size(63, 24);
-            this.rdbNome.TabIndex = 35;
-            this.rdbNome.TabStop = true;
-            this.rdbNome.Text = "Nome";
-            this.rdbNome.UseVisualStyleBackColor = true;
-            this.rdbNome.Visible = false;
+            this.btnFiltro.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnFiltro.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnFiltro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFiltro.BackgroundImage")));
+            this.btnFiltro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnFiltro.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFiltro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFiltro.Location = new System.Drawing.Point(485, 31);
+            this.btnFiltro.Name = "btnFiltro";
+            this.btnFiltro.Size = new System.Drawing.Size(97, 32);
+            this.btnFiltro.TabIndex = 33;
+            this.btnFiltro.Text = "&Filtro";
+            this.btnFiltro.UseVisualStyleBackColor = false;
+            this.btnFiltro.Click += new System.EventHandler(this.BtnFiltro_Click);
             // 
-            // rdbCidade
+            // label2
             // 
-            this.rdbCidade.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.rdbCidade.AutoSize = true;
-            this.rdbCidade.Location = new System.Drawing.Point(781, 35);
-            this.rdbCidade.Name = "rdbCidade";
-            this.rdbCidade.Size = new System.Drawing.Size(70, 24);
-            this.rdbCidade.TabIndex = 36;
-            this.rdbCidade.TabStop = true;
-            this.rdbCidade.Text = "Cidade";
-            this.rdbCidade.UseVisualStyleBackColor = true;
-            this.rdbCidade.Visible = false;
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(8, 37);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 20);
+            this.label2.TabIndex = 31;
+            this.label2.Text = "Pesquisa:";
             // 
-            // rdbId
+            // txtPesquisa
             // 
-            this.rdbId.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.rdbId.AutoSize = true;
-            this.rdbId.Location = new System.Drawing.Point(668, 35);
-            this.rdbId.Name = "rdbId";
-            this.rdbId.Size = new System.Drawing.Size(38, 24);
-            this.rdbId.TabIndex = 37;
-            this.rdbId.TabStop = true;
-            this.rdbId.Text = "Id";
-            this.rdbId.UseVisualStyleBackColor = true;
-            this.rdbId.Visible = false;
+            this.txtPesquisa.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtPesquisa.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesquisa.Location = new System.Drawing.Point(83, 34);
+            this.txtPesquisa.Name = "txtPesquisa";
+            this.txtPesquisa.Size = new System.Drawing.Size(293, 26);
+            this.txtPesquisa.TabIndex = 31;
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnPesquisar.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnPesquisar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.BackgroundImage")));
+            this.btnPesquisar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnPesquisar.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPesquisar.Location = new System.Drawing.Point(382, 31);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(97, 32);
+            this.btnPesquisar.TabIndex = 32;
+            this.btnPesquisar.Text = "&Pesquisar";
+            this.btnPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPesquisar.UseVisualStyleBackColor = false;
+            this.btnPesquisar.Click += new System.EventHandler(this.BtnPesquisar_Click);
             // 
             // groupBox1
             // 
@@ -557,7 +557,7 @@
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 254);
+            this.groupBox1.Location = new System.Drawing.Point(14, 255);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(995, 233);
             this.groupBox1.TabIndex = 31;
@@ -569,7 +569,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
-            this.ClientSize = new System.Drawing.Size(1019, 542);
+            this.ClientSize = new System.Drawing.Size(1022, 543);
             this.ControlBox = false;
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnCancelar);

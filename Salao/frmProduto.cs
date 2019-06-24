@@ -19,6 +19,7 @@ namespace Salao
         private void btnSair_Click(object sender, EventArgs e)
         {
             this.Close();
+            Salao.frmMenu menu = new Salao.frmMenu();
         }
         private void habilitaCampos(bool status)
         {

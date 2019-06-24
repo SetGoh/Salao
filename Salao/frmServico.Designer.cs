@@ -359,8 +359,7 @@
             // 
             // frmServico
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(1019, 542);
             this.ControlBox = false;
@@ -376,6 +375,7 @@
             this.Name = "frmServico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manter Servico";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmServico_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvServico)).EndInit();
             this.groupBox2.ResumeLayout(false);

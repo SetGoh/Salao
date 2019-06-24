@@ -17,7 +17,7 @@ namespace Salao
             InitializeComponent();
         }
 
-        private void btnSair_Click(object sender, EventArgs e)
+        public void btnSair_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -66,8 +66,6 @@ namespace Salao
             Camadas.BLL.Cliente bllCli = new Camadas.BLL.Cliente();
             dgvCliente.DataSource = "";
             dgvCliente.DataSource = bllCli.Select();
-
-            habilitaCampos(false);
         }
 
         private void BtnInserir_Click(object sender, EventArgs e)

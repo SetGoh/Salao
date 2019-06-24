@@ -50,6 +50,7 @@
             this.btnSair = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.rdbId = new System.Windows.Forms.RadioButton();
+            this.rdbMarca = new System.Windows.Forms.RadioButton();
             this.rdbNome = new System.Windows.Forms.RadioButton();
             this.rdbTodos = new System.Windows.Forms.RadioButton();
             this.btnFiltro = new System.Windows.Forms.Button();
@@ -57,7 +58,6 @@
             this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rdbMarca = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -328,6 +328,19 @@
             this.rdbId.UseVisualStyleBackColor = true;
             this.rdbId.Visible = false;
             // 
+            // rdbMarca
+            // 
+            this.rdbMarca.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.rdbMarca.AutoSize = true;
+            this.rdbMarca.Location = new System.Drawing.Point(781, 35);
+            this.rdbMarca.Name = "rdbMarca";
+            this.rdbMarca.Size = new System.Drawing.Size(63, 24);
+            this.rdbMarca.TabIndex = 36;
+            this.rdbMarca.TabStop = true;
+            this.rdbMarca.Text = "Marca";
+            this.rdbMarca.UseVisualStyleBackColor = true;
+            this.rdbMarca.Visible = false;
+            // 
             // rdbNome
             // 
             this.rdbNome.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -431,23 +444,9 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados";
             // 
-            // rdbMarca
-            // 
-            this.rdbMarca.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.rdbMarca.AutoSize = true;
-            this.rdbMarca.Location = new System.Drawing.Point(781, 35);
-            this.rdbMarca.Name = "rdbMarca";
-            this.rdbMarca.Size = new System.Drawing.Size(63, 24);
-            this.rdbMarca.TabIndex = 36;
-            this.rdbMarca.TabStop = true;
-            this.rdbMarca.Text = "Marca";
-            this.rdbMarca.UseVisualStyleBackColor = true;
-            this.rdbMarca.Visible = false;
-            // 
             // frmProduto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(1019, 542);
             this.ControlBox = false;
@@ -463,6 +462,7 @@
             this.Name = "frmProduto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manter Produto";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmProduto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).EndInit();
             this.groupBox2.ResumeLayout(false);

@@ -50,6 +50,7 @@
             this.btnSair = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.rdbId = new System.Windows.Forms.RadioButton();
+            this.rdbNome = new System.Windows.Forms.RadioButton();
             this.rdbTodos = new System.Windows.Forms.RadioButton();
             this.btnFiltro = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -65,7 +66,6 @@
             this.cmbCliente = new System.Windows.Forms.ComboBox();
             this.dtpVenda = new System.Windows.Forms.DateTimePicker();
             this.txtValorProd = new System.Windows.Forms.TextBox();
-            this.rdbNome = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVenda)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -341,6 +341,19 @@
             this.rdbId.UseVisualStyleBackColor = true;
             this.rdbId.Visible = false;
             // 
+            // rdbNome
+            // 
+            this.rdbNome.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.rdbNome.AutoSize = true;
+            this.rdbNome.Location = new System.Drawing.Point(712, 35);
+            this.rdbNome.Name = "rdbNome";
+            this.rdbNome.Size = new System.Drawing.Size(63, 24);
+            this.rdbNome.TabIndex = 35;
+            this.rdbNome.TabStop = true;
+            this.rdbNome.Text = "Nome";
+            this.rdbNome.UseVisualStyleBackColor = true;
+            this.rdbNome.Visible = false;
+            // 
             // rdbTodos
             // 
             this.rdbTodos.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -528,23 +541,9 @@
             this.txtValorProd.TabIndex = 24;
             this.txtValorProd.Leave += new System.EventHandler(this.txtValor_Leave);
             // 
-            // rdbNome
-            // 
-            this.rdbNome.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.rdbNome.AutoSize = true;
-            this.rdbNome.Location = new System.Drawing.Point(712, 35);
-            this.rdbNome.Name = "rdbNome";
-            this.rdbNome.Size = new System.Drawing.Size(63, 24);
-            this.rdbNome.TabIndex = 35;
-            this.rdbNome.TabStop = true;
-            this.rdbNome.Text = "Nome";
-            this.rdbNome.UseVisualStyleBackColor = true;
-            this.rdbNome.Visible = false;
-            // 
             // frmVenda
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(1019, 542);
             this.ControlBox = false;
@@ -560,6 +559,7 @@
             this.Name = "frmVenda";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Movimentar Venda";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmVenda_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVenda)).EndInit();
             this.groupBox2.ResumeLayout(false);

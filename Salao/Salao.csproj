@@ -92,6 +92,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Relatorio\Funcoes.cs" />
+    <Compile Include="Relatorio\relProduto.cs" />
+    <Compile Include="Relatorio\relVenda.cs" />
     <EmbeddedResource Include="frmVenda.resx">
       <DependentUpon>frmVenda.cs</DependentUpon>
     </EmbeddedResource>

@@ -25,11 +25,12 @@ namespace Salao
         private void ClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmCliente frmCli = new frmCliente();
+            
             frmCli.MdiParent = this;
             frmCli.Show();
         }
 
-        private void Timer1_Tick(object sender, EventArgs e)
+        public void Timer1_Tick(object sender, EventArgs e)
         {
             lblData.Text = DateTime.Now.ToLongDateString();
             lblRelogio.Text = DateTime.Now.ToLongTimeString();
@@ -54,6 +55,22 @@ namespace Salao
             frmVenda frmVend = new frmVenda();
             frmVend.MdiParent = this;
             frmVend.Show();
+        }
+
+        private void ProdutosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Relatorio.relProduto.impRelProduto();
+        }
+
+        private void VendaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Relatorio.relVenda.impRelVenda();
+        }
+
+        private void FrmMenu_Load(object sender, EventArgs e)
+        {
+            //lblData.Show();
+            //lblRelogio.Show();
         }
     }
 }

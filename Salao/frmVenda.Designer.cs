@@ -50,14 +50,14 @@
             this.btnSair = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.rdbId = new System.Windows.Forms.RadioButton();
-            this.rdbCidade = new System.Windows.Forms.RadioButton();
-            this.rdbNome = new System.Windows.Forms.RadioButton();
             this.rdbTodos = new System.Windows.Forms.RadioButton();
             this.btnFiltro = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtValorServ = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.lbl = new System.Windows.Forms.Label();
             this.cmbProduto = new System.Windows.Forms.ComboBox();
@@ -65,8 +65,7 @@
             this.cmbCliente = new System.Windows.Forms.ComboBox();
             this.dtpVenda = new System.Windows.Forms.DateTimePicker();
             this.txtValorProd = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtValorServ = new System.Windows.Forms.TextBox();
+            this.rdbNome = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVenda)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -100,6 +99,7 @@
             this.btnRemover.Text = "&Remover";
             this.btnRemover.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRemover.UseVisualStyleBackColor = false;
+            this.btnRemover.Visible = false;
             // 
             // btnEditar
             // 
@@ -114,6 +114,7 @@
             this.btnEditar.TabIndex = 2;
             this.btnEditar.Text = "    &Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Visible = false;
             // 
             // btnInserir
             // 
@@ -223,7 +224,7 @@
             this.txtCliente.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCliente.Location = new System.Drawing.Point(298, 62);
             this.txtCliente.Name = "txtCliente";
-            this.txtCliente.Size = new System.Drawing.Size(200, 26);
+            this.txtCliente.Size = new System.Drawing.Size(57, 26);
             this.txtCliente.TabIndex = 16;
             this.txtCliente.Leave += new System.EventHandler(this.txtCliente_Leave);
             // 
@@ -233,7 +234,7 @@
             this.txtServico.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtServico.Location = new System.Drawing.Point(298, 103);
             this.txtServico.Name = "txtServico";
-            this.txtServico.Size = new System.Drawing.Size(200, 26);
+            this.txtServico.Size = new System.Drawing.Size(57, 26);
             this.txtServico.TabIndex = 17;
             this.txtServico.Leave += new System.EventHandler(this.txtServico_Leave);
             // 
@@ -243,7 +244,7 @@
             this.txtProduto.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProduto.Location = new System.Drawing.Point(298, 141);
             this.txtProduto.Name = "txtProduto";
-            this.txtProduto.Size = new System.Drawing.Size(200, 26);
+            this.txtProduto.Size = new System.Drawing.Size(57, 26);
             this.txtProduto.TabIndex = 18;
             this.txtProduto.Leave += new System.EventHandler(this.txtProduto_Leave);
             // 
@@ -311,7 +312,6 @@
             this.groupBox2.BackColor = System.Drawing.SystemColors.Menu;
             this.groupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.groupBox2.Controls.Add(this.rdbId);
-            this.groupBox2.Controls.Add(this.rdbCidade);
             this.groupBox2.Controls.Add(this.rdbNome);
             this.groupBox2.Controls.Add(this.rdbTodos);
             this.groupBox2.Controls.Add(this.btnFiltro);
@@ -341,32 +341,6 @@
             this.rdbId.UseVisualStyleBackColor = true;
             this.rdbId.Visible = false;
             // 
-            // rdbCidade
-            // 
-            this.rdbCidade.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.rdbCidade.AutoSize = true;
-            this.rdbCidade.Location = new System.Drawing.Point(781, 35);
-            this.rdbCidade.Name = "rdbCidade";
-            this.rdbCidade.Size = new System.Drawing.Size(70, 24);
-            this.rdbCidade.TabIndex = 36;
-            this.rdbCidade.TabStop = true;
-            this.rdbCidade.Text = "Cidade";
-            this.rdbCidade.UseVisualStyleBackColor = true;
-            this.rdbCidade.Visible = false;
-            // 
-            // rdbNome
-            // 
-            this.rdbNome.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.rdbNome.AutoSize = true;
-            this.rdbNome.Location = new System.Drawing.Point(712, 35);
-            this.rdbNome.Name = "rdbNome";
-            this.rdbNome.Size = new System.Drawing.Size(63, 24);
-            this.rdbNome.TabIndex = 35;
-            this.rdbNome.TabStop = true;
-            this.rdbNome.Text = "Nome";
-            this.rdbNome.UseVisualStyleBackColor = true;
-            this.rdbNome.Visible = false;
-            // 
             // rdbTodos
             // 
             this.rdbTodos.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -379,6 +353,7 @@
             this.rdbTodos.Text = "Todos";
             this.rdbTodos.UseVisualStyleBackColor = true;
             this.rdbTodos.Visible = false;
+            this.rdbTodos.CheckedChanged += new System.EventHandler(this.rdbTodos_CheckedChanged);
             // 
             // btnFiltro
             // 
@@ -394,6 +369,7 @@
             this.btnFiltro.TabIndex = 33;
             this.btnFiltro.Text = "&Filtro";
             this.btnFiltro.UseVisualStyleBackColor = false;
+            this.btnFiltro.Click += new System.EventHandler(this.BtnFiltro_Click);
             // 
             // label2
             // 
@@ -430,6 +406,7 @@
             this.btnPesquisar.Text = "&Pesquisar";
             this.btnPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPesquisar.UseVisualStyleBackColor = false;
+            this.btnPesquisar.Click += new System.EventHandler(this.BtnPesquisar_Click);
             // 
             // groupBox1
             // 
@@ -463,6 +440,27 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados";
             // 
+            // txtValorServ
+            // 
+            this.txtValorServ.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.txtValorServ.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtValorServ.Location = new System.Drawing.Point(681, 103);
+            this.txtValorServ.Name = "txtValorServ";
+            this.txtValorServ.Size = new System.Drawing.Size(53, 26);
+            this.txtValorServ.TabIndex = 33;
+            this.txtValorServ.Leave += new System.EventHandler(this.TxtValorServ_Leave);
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(631, 106);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 20);
+            this.label6.TabIndex = 32;
+            this.label6.Text = "Valor:";
+            // 
             // lblTotal
             // 
             this.lblTotal.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -486,27 +484,27 @@
             // cmbProduto
             // 
             this.cmbProduto.FormattingEnabled = true;
-            this.cmbProduto.Location = new System.Drawing.Point(504, 141);
+            this.cmbProduto.Location = new System.Drawing.Point(361, 141);
             this.cmbProduto.Name = "cmbProduto";
-            this.cmbProduto.Size = new System.Drawing.Size(121, 28);
+            this.cmbProduto.Size = new System.Drawing.Size(264, 28);
             this.cmbProduto.TabIndex = 29;
             this.cmbProduto.SelectedIndexChanged += new System.EventHandler(this.CmbProduto_SelectedIndexChanged);
             // 
             // cmbServico
             // 
             this.cmbServico.FormattingEnabled = true;
-            this.cmbServico.Location = new System.Drawing.Point(504, 103);
+            this.cmbServico.Location = new System.Drawing.Point(361, 103);
             this.cmbServico.Name = "cmbServico";
-            this.cmbServico.Size = new System.Drawing.Size(121, 28);
+            this.cmbServico.Size = new System.Drawing.Size(264, 28);
             this.cmbServico.TabIndex = 28;
             this.cmbServico.SelectedIndexChanged += new System.EventHandler(this.CmbServico_SelectedIndexChanged);
             // 
             // cmbCliente
             // 
             this.cmbCliente.FormattingEnabled = true;
-            this.cmbCliente.Location = new System.Drawing.Point(504, 62);
+            this.cmbCliente.Location = new System.Drawing.Point(361, 62);
             this.cmbCliente.Name = "cmbCliente";
-            this.cmbCliente.Size = new System.Drawing.Size(121, 28);
+            this.cmbCliente.Size = new System.Drawing.Size(264, 28);
             this.cmbCliente.TabIndex = 27;
             this.cmbCliente.SelectedIndexChanged += new System.EventHandler(this.cmbCliente_SelectedIndexChanged);
             // 
@@ -530,26 +528,18 @@
             this.txtValorProd.TabIndex = 24;
             this.txtValorProd.Leave += new System.EventHandler(this.txtValor_Leave);
             // 
-            // label6
+            // rdbNome
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(631, 106);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 20);
-            this.label6.TabIndex = 32;
-            this.label6.Text = "Valor:";
-            // 
-            // txtValorServ
-            // 
-            this.txtValorServ.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.txtValorServ.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtValorServ.Location = new System.Drawing.Point(681, 103);
-            this.txtValorServ.Name = "txtValorServ";
-            this.txtValorServ.Size = new System.Drawing.Size(53, 26);
-            this.txtValorServ.TabIndex = 33;
-            this.txtValorServ.Leave += new System.EventHandler(this.TxtValorServ_Leave);
+            this.rdbNome.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.rdbNome.AutoSize = true;
+            this.rdbNome.Location = new System.Drawing.Point(712, 35);
+            this.rdbNome.Name = "rdbNome";
+            this.rdbNome.Size = new System.Drawing.Size(63, 24);
+            this.rdbNome.TabIndex = 35;
+            this.rdbNome.TabStop = true;
+            this.rdbNome.Text = "Nome";
+            this.rdbNome.UseVisualStyleBackColor = true;
+            this.rdbNome.Visible = false;
             // 
             // frmVenda
             // 
@@ -606,8 +596,6 @@
         private System.Windows.Forms.TextBox txtPesquisa;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Button btnFiltro;
-        private System.Windows.Forms.RadioButton rdbCidade;
-        private System.Windows.Forms.RadioButton rdbNome;
         private System.Windows.Forms.RadioButton rdbTodos;
         private System.Windows.Forms.RadioButton rdbId;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -620,5 +608,6 @@
         private System.Windows.Forms.Label lbl;
         private System.Windows.Forms.TextBox txtValorServ;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.RadioButton rdbNome;
     }
 }

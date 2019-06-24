@@ -27,8 +27,8 @@ namespace Salao
         private void habilitaCampos(bool status)
         {
             btnInserir.Visible = !status;
-            btnEditar.Visible = !status;
-            btnRemover.Visible = !status;
+//            btnEditar.Visible = !status;
+//            btnRemover.Visible = !status;
             btnSair.Visible = !status;
             btnGravar.Visible = status;
             btnCancelar.Visible = status;
@@ -162,7 +162,7 @@ namespace Salao
         {
             try
             {
-//             cmbProduto.SelectedValue = Convert.ToInt32(txtProduto.Text);
+                cmbProduto.SelectedValue = Convert.ToInt32(txtProduto.Text);
                 int idProd = Convert.ToInt32(cmbProduto.SelectedValue);
                 buscarProduto(idProd);
                 if (produto != null)
@@ -264,5 +264,38 @@ namespace Salao
         {
             calcularTotal();
         }
+
+        private void rdbTodos_CheckedChanged(object sender, EventArgs e)
+        {
+            Camadas.BLL.Venda bllVend = new Camadas.BLL.Venda();
+            dgvVenda.DataSource = "";
+            dgvVenda.DataSource = bllVend.Select();
+        }
+
+        private void BtnFiltro_Click(object sender, EventArgs e)
+        {
+            rdbTodos.Visible = !rdbTodos.Visible;
+            rdbId.Visible = !rdbId.Visible;
+//            rdbNome.Visible = !rdbNome.Visible;
+        }
+
+        private void BtnPesquisar_Click(object sender, EventArgs e)
+        {
+            List<Camadas.Model.Venda> listaVenda = new List<Camadas.Model.Venda>();
+            Camadas.BLL.Venda bllVend = new Camadas.BLL.Venda();
+            if (rdbTodos.Checked)
+                listaVenda = bllVend.Select();
+            else if (rdbId.Checked)
+                listaVenda = bllVend.SelectById(Convert.ToInt32(txtPesquisa.Text));
+//            else if (rdbNome.Checked)
+//                listaProduto = bllProduto.SelectByNome(txtPesquisa.Text.Trim());
+
+
+            dgvVenda.DataSource = "";
+            dgvVenda.DataSource = listaVenda;
+
+            limpaCampos();
+        }
+
     }
 }

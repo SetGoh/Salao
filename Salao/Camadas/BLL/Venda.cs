@@ -16,14 +16,20 @@ namespace Salao.Camadas.BLL
         public void Insert(Model.Venda venda)
         {
             DAL.Venda dalVend = new DAL.Venda();
-//            if (venda.cliente != 0) Preciso arrumar
-                dalVend.Insert(venda);
+            BLL.Produto bllProd = new Produto();
+
+            Model.Produto produto = new Model.Produto();
+            
+            produto = bllProd.SelectById(venda.produto)[0];
+            produto.quantidade = produto.quantidade - venda.quantidade;
+
+            bllProd.Update(produto);  
+            dalVend.Insert(venda);
         }
 
         public void Update(Model.Venda venda)
         {
             DAL.Venda dalVend = new DAL.Venda();
-//            if (venda.cliente != 0) Preciso arrumar
                 dalVend.Update(venda);
         }
 
@@ -33,6 +39,11 @@ namespace Salao.Camadas.BLL
             if (id > 0)
                 dalVend.Delete(id);
 
+        }
+        public List<Model.Venda> SelectById(int id)
+        {
+            DAL.Venda dalVend = new DAL.Venda();
+            return dalVend.SelectById(id);
         }
     }
 }

@@ -128,5 +128,43 @@ namespace Salao.Camadas.DAL
             }
 
         }
+        public List<Model.Venda> SelectById(int id)
+        {
+            List<Model.Venda> listaVenda = new List<Model.Venda>();
+            SqlConnection conexao = new SqlConnection(strCon);
+            string sql = "Select Venda.id, Venda.data, Venda.cliente, Cliente.nome, Venda.servico, Servico.descricao, Servico.valorServ, Venda.produto, Produto.nomeProd, Venda.quantidade, Produto.valorProd from Venda inner join Cliente on Venda.cliente = Cliente.id inner join Servico on Venda.servico = Servico.id inner join Produto on Venda.produto = Produto.id where Venda.id=@id;";
+            SqlCommand cmd = new SqlCommand(sql, conexao);
+            cmd.Parameters.AddWithValue("@id", id);
+            try
+            {
+                conexao.Open();
+                SqlDataReader dados = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                while (dados.Read())
+                {
+                    Model.Venda venda = new Model.Venda();
+                    venda.id = Convert.ToInt32(dados["id"].ToString());
+                    venda.data = Convert.ToDateTime(dados["data"].ToString());
+                    venda.cliente = Convert.ToInt32(dados["cliente"].ToString());
+                    venda.nome = dados["nome"].ToString();
+                    venda.servico = Convert.ToInt32(dados["servico"].ToString());
+                    venda.descricao = dados["descricao"].ToString();
+                    venda.valorServ = Convert.ToSingle(dados["valorServ"].ToString());
+                    venda.produto = Convert.ToInt32(dados["produto"].ToString());
+                    venda.nomeProd = dados["nomeProd"].ToString();
+                    venda.quantidade = Convert.ToInt32(dados["quantidade"].ToString());
+                    venda.valorProd = Convert.ToSingle(dados["valorProd"].ToString());
+                    listaVenda.Add(venda);
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Erro - Consulta Select de Venda");
+            }
+            finally
+            {
+                conexao.Close(); //não é necessario pois usou o CommandBehavior.CloseConnection
+            }
+            return listaVenda;
+        }
     }
 }

@@ -66,6 +66,9 @@ namespace Salao
             Camadas.BLL.Cliente bllCli = new Camadas.BLL.Cliente();
             dgvCliente.DataSource = "";
             dgvCliente.DataSource = bllCli.Select();
+
+            limpaCampos();
+            habilitaCampos(false);
         }
 
         private void BtnInserir_Click(object sender, EventArgs e)

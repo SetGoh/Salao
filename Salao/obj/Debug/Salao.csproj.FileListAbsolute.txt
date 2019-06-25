@@ -22,3 +22,17 @@ C:\Users\georg\Source\Repos\SetGoh\Salao\Salao\obj\Debug\Salao.frmMenu.resources
 C:\Users\georg\Source\Repos\SetGoh\Salao\Salao\obj\Debug\Salao.frmProduto.resources
 C:\Users\georg\Source\Repos\SetGoh\Salao\Salao\obj\Debug\Salao.frmVenda.resources
 C:\Users\georg\Source\Repos\SetGoh\Salao\Salao\obj\Debug\Salao.frmServico.resources
+C:\Users\georg\Downloads\Salao-master (1)\Salao-master\Salao\bin\Debug\Salao.exe.config
+C:\Users\georg\Downloads\Salao-master (1)\Salao-master\Salao\bin\Debug\Salao.exe
+C:\Users\georg\Downloads\Salao-master (1)\Salao-master\Salao\bin\Debug\Salao.pdb
+C:\Users\georg\Downloads\Salao-master (1)\Salao-master\Salao\obj\Debug\Salao.csprojAssemblyReference.cache
+C:\Users\georg\Downloads\Salao-master (1)\Salao-master\Salao\obj\Debug\Salao.frmVenda.resources
+C:\Users\georg\Downloads\Salao-master (1)\Salao-master\Salao\obj\Debug\Salao.frmServico.resources
+C:\Users\georg\Downloads\Salao-master (1)\Salao-master\Salao\obj\Debug\Salao.frmProduto.resources
+C:\Users\georg\Downloads\Salao-master (1)\Salao-master\Salao\obj\Debug\Salao.frmCliente.resources
+C:\Users\georg\Downloads\Salao-master (1)\Salao-master\Salao\obj\Debug\Salao.frmMenu.resources
+C:\Users\georg\Downloads\Salao-master (1)\Salao-master\Salao\obj\Debug\Salao.Properties.Resources.resources
+C:\Users\georg\Downloads\Salao-master (1)\Salao-master\Salao\obj\Debug\Salao.csproj.GenerateResource.cache
+C:\Users\georg\Downloads\Salao-master (1)\Salao-master\Salao\obj\Debug\Salao.csproj.CoreCompileInputs.cache
+C:\Users\georg\Downloads\Salao-master (1)\Salao-master\Salao\obj\Debug\Salao.exe
+C:\Users\georg\Downloads\Salao-master (1)\Salao-master\Salao\obj\Debug\Salao.pdb

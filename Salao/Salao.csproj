@@ -60,6 +60,12 @@
     <Compile Include="Camadas\Model\Produto.cs" />
     <Compile Include="Camadas\Model\Servico.cs" />
     <Compile Include="Camadas\Model\Venda.cs" />
+    <Compile Include="frmSobre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSobre.Designer.cs">
+      <DependentUpon>frmSobre.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmVenda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     <Compile Include="Relatorio\Funcoes.cs" />
     <Compile Include="Relatorio\relProduto.cs" />
     <Compile Include="Relatorio\relVenda.cs" />
+    <EmbeddedResource Include="frmSobre.resx">
+      <DependentUpon>frmSobre.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmVenda.resx">
       <DependentUpon>frmVenda.cs</DependentUpon>
     </EmbeddedResource>

@@ -72,5 +72,11 @@ namespace Salao
             //lblData.Show();
             //lblRelogio.Show();
         }
+
+        private void SobreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSobre frmSob = new frmSobre();
+            frmSob.ShowDialog();
+        }
     }
 }
